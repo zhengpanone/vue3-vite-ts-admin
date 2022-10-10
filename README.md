@@ -1,3 +1,5 @@
+# Vue3 脚手架工具
+
 ## 创建项目
 
 ```shell
@@ -43,9 +45,9 @@ pnpm i husky lint-staged -D
 pnpm run prepare
 ```
 
-### 添加各种git hooks钩子
+### 添加各种 git hooks 钩子
 
-pre-commit 钩子，添加的是lint-staged去对git暂存区的代码做一些格式化的操作
+pre-commit 钩子，添加的是 lint-staged 去对 git 暂存区的代码做一些格式化的操作
 
 ```shell
 npx husky add .husky/pre-commit "npx lint-staged"
@@ -54,8 +56,6 @@ npx husky add .husky/pre-commit "npx lint-staged"
 add 追加
 
 set 直接覆盖
-
-
 
 ```shell
 pnpm i @commitlint/config-conventional @commitlint/cli -D
