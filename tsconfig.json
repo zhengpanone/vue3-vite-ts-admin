@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    // 指定es目标版本
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
+    // 决定如何处理模块
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
@@ -10,15 +12,25 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    // 编译过程中需要引入的库文件列表
     "lib": [
       "ESNext",
-      "DOM"
+      "DOM",
+      "DOM.Iterable"
+    ],
+    // 默认所有可见的@types包会在编译过程中被包含进来
+    "types": [
+      "vite/client"
     ],
     "skipLibCheck": true,
+    // 解析非相对模块名的基准目录
     "baseUrl": "src",
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "*.ts": [
+        "*"
       ]
     }
   },
