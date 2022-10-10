@@ -54,3 +54,13 @@ npx husky add .husky/pre-commit "npx lint-staged"
 add 追加
 
 set 直接覆盖
+
+
+
+```shell
+pnpm i @commitlint/config-conventional @commitlint/cli -D
+```
+
+```shell
+npx husky add .husky/commit-msg "npx --no -- commitlint --edit ${1}"
+```
