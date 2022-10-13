@@ -3,6 +3,7 @@
     // 指定es目标版本
     "target": "ESNext",
     "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
     "module": "ESNext",
     // 决定如何处理模块
     "moduleResolution": "Node",
@@ -24,21 +25,31 @@
     ],
     "skipLibCheck": true,
     // 解析非相对模块名的基准目录
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "src/*"
-      ],
-      "*.ts": [
-        "*"
+        "./src/*"
       ]
-    }
+    },
+    "skipDefaultLibCheck": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        /* "options": {
+          "customMatcher": ".(styl|css|scss|less|sass)$"
+        } */
+      }
+    ]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ],
   "references": [
     {
