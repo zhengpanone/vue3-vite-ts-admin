@@ -6,4 +6,6 @@ import App from './App.vue'
 
 // console.log(import.meta.env.VITE_BASE_URL)
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+// app.component('IconEpFold', IconEpFold)
+app.use(router).mount('#app')

@@ -21,7 +21,8 @@
     ],
     // 默认所有可见的@types包会在编译过程中被包含进来
     "types": [
-      "vite/client"
+      "vite/client",
+      "element-plus/global"
     ],
     "skipLibCheck": true,
     // 解析非相对模块名的基准目录
